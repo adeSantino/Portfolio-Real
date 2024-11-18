@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjusted for smaller screens */
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 15px; /* Reduced margin for smaller screens */
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-menu li a:hover {
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Spacing between menu items on small screens */
+    }
+
+    .navbar-menu li a {
+        font-size: 18px; /* Slightly larger font for better readability on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 20px;
+    }
+
+    .navbar-menu li a {
+        font-size: 16px;
+    }
+
+    .navbar-menu li {
+        margin-bottom: 8px;
+    }
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    padding: 60px;
+    min-height: 60vh;
+    text-align: left; /* Keep text left-aligned */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keep space between image and text */
+}
+
+.info {
+    max-width: 60%; /* Control the width of the text section */
+    margin-right: 20px; /* Maintain space between text and profile image */
+    
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; /* Keep social icons aligned to the left */
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    justify-content: flex-start; /* Keep skills icons aligned to the left */
+    margin-top: 10px;
+}
+
+.profile {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+    background: #000000; /* Background color around the circular image */
+    border: 0.5px solid #000000; /* Border around the circular image */
+    padding: 0.5px; /* Optional: Add some padding inside the border */
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile.circle {
+    border-radius: 10px; /* Rounded corners */
+    width: 250px; /* Adjust width */
+    height: 250px; /* Adjust height */
+    border: 2px solid #0a0a0a; /* Border around the square image */
+    background: #000000; /* Background color around the image */
+}

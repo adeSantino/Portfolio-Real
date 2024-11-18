@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">DanAd.dev</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <br>
+  
+    <center>
+        <h1 style="font-family: 'Poppins', sans-serif; font-weight: 1000; margin-bottom: 1px;">WELCOME TO MY PORTFOLIO</h1>
+    </center>
+    
+    <section class="hero">
+        <div class="info">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 1px;">About my Projects</h2>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; margin-top: 1px;"> 
+                Explore a collection of my work that showcases my skills and creativity. From innovative web designs to dynamic frontend applications, each project reflects my commitment to crafting user-centered solutions. Dive in to see how I bring ideas to life through technology and design.
+            </p>
+            <br>
+            <div class="social-icons"> 
+                <a href="https://www.linkedin.com/in/dan-adrianne-telan-393551308/" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn Profile" style="width: 20px; height: 20px; margin-right: 10px;">
+                </a>
+                <a href="https://github.com/adeSantino" target="_blank">
+                    <img src="img/github.png" alt="LinkedIn Profile" style="width: 20px; height: 20px; margin-right: 10px;">
+                </a>
+            </div>
+          
+            <center> 
+                <div class="flex items-center space-x-7">
+                    <h1 class="text-lg font-bold font-poppins tracking-wider flex items-center">TECH SKILLS</h1>
+                    <img src="img/html.png" alt="HTML" style="width: 20px; height: 20px;">
+                    <img src="img/css-logo.png" alt="CSS" style="width: 20px; height: 20px;">
+                    <img src="img/JavaScript-logo.png" alt="JavaScript" style="width: 20px; height: 20px;">
+                    <img src="img/Laravel.png" alt="Laravel" style="width: 20px; height: 20px;">
+                </div>
+            </center>
+        </div>
+        <div class="profile">
+            <img src="img/me.png" alt="Profile Picture">
+        </div>
+    </section>
+    <br>
+
+    <!-- Card Chooser Section -->
+    <section class="card-chooser container mx-auto py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-32 sm:h-48 object-cover" src="img/project1.jpg" alt="Project 1">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Project 1</h3>
+                    <p class="text-gray-700 mb-4">Description of Project 1 goes here. This project is about...</p>
+                    <a href="sample.html" class="bg-blue-500 text-white px-4 py-2 rounded inline-block">Choose</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-32 sm:h-48 object-cover" src="img/project2.jpg" alt="Project 2">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Project 2</h3>
+                    <p class="text-gray-700 mb-4">Description of Project 2 goes here. This project is about...</p>
+                    <a href="sample2.html" class="bg-blue-500 text-white px-4 py-2 rounded inline-block">Choose</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-32 sm:h-48 object-cover" src="img/project3.jpg" alt="Project 3">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Project 3</h3>
+                    <p class="text-gray-700 mb-4">Description of Project 3 goes here. This project is about...</p>
+                    <a href="sample3" class="bg-blue-500 text-white px-4 py-2 rounded inline-block">Choose</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Card Chooser Section -->
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">DanAd.dev</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+ <!-- Calculator Section -->
+ <center>
+    <h1 class="text-2xl font-bold mb-4">BASICS</h1>
+    <div class="flex items-start justify-center gap-20 mt-8">
+        
+        <!-- Calculator Section -->
+        <div class="flex flex-col items-center">
+            <h1 class="text-2xl font-bold mb-4">Calculator</h1>
+            <div class="calculator mt-8 p-6 border border-gray-300 rounded-md text-left">
+                <input type="text" id="display" class="block w-40 p-2 mb-4 text-center border border-gray-300 rounded" readonly>
+                <div class="grid grid-cols-4 gap-2">
+                    <button onclick="appendNumber('7')" class="p-4 bg-blue-500 text-white rounded">7</button>
+                    <button onclick="appendNumber('8')" class="p-4 bg-blue-500 text-white rounded">8</button>
+                    <button onclick="appendNumber('9')" class="p-4 bg-blue-500 text-white rounded">9</button>
+                    <button onclick="appendOperator('/')" class="p-4 bg-blue-500 text-white rounded">/</button>
+    
+                    <button onclick="appendNumber('4')" class="p-4 bg-blue-500 text-white rounded">4</button>
+                    <button onclick="appendNumber('5')" class="p-4 bg-blue-500 text-white rounded">5</button>
+                    <button onclick="appendNumber('6')" class="p-4 bg-blue-500 text-white rounded">6</button>
+                    <button onclick="appendOperator('*')" class="p-4 bg-blue-500 text-white rounded">*</button>
+    
+                    <button onclick="appendNumber('1')" class="p-4 bg-blue-500 text-white rounded">1</button>
+                    <button onclick="appendNumber('2')" class="p-4 bg-blue-500 text-white rounded">2</button>
+                    <button onclick="appendNumber('3')" class="p-4 bg-blue-500 text-white rounded">3</button>
+                    <button onclick="appendOperator('-')" class="p-4 bg-blue-500 text-white rounded">-</button>
+    
+                    <button onclick="appendNumber('0')" class="p-4 bg-blue-500 text-white rounded">0</button>
+                    <button onclick="clearDisplay()" class="p-4 bg-red-500 text-white rounded">C</button>
+                    <button onclick="calculateResult()" class="p-4 bg-green-500 text-white rounded">=</button>
+                    <button onclick="appendOperator('+')" class="p-4 bg-blue-500 text-white rounded">+</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Tic-Tac-Toe Section -->
+        <div class="text-center">
+            <h1 class="text-2xl font-bold mb-4">Tic-Tac-Toe</h1>
+            <br>
+            <div id="gameBoard" class="grid grid-cols-3 gap-4 w-64 mx-auto">
+                <!-- Cells will be added here by JavaScript -->
+            </div>
+            <button id="resetButton" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">Reset Game</button>
+            <p id="message" class="mt-2 text-xl font-semibold"></p>
+        </div>
+    </div>
+
+    <!-- calendar -->
+
+    <div class="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
+        <div class="flex justify-between items-center mb-4">
+            <button id="prevMonth" class="text-lg font-semibold">&lt;</button>
+            <h2 id="monthYear" class="text-xl font-bold"></h2>
+            <button id="nextMonth" class="text-lg font-semibold">&gt;</button>
+        </div>
+        <div class="grid grid-cols-7 text-center font-semibold">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div id="calendarDays" class="grid grid-cols-7 gap-2 mt-2"></div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+            <span id="closeModal" class="text-gray-600 cursor-pointer text-2xl float-right">&times;</span>
+            <h3 class="text-xl font-bold mb-4">Add Event</h3>
+            <form id="eventForm" class="space-y-4">
+                <div>
+                    <label for="eventType" class="block text-sm font-medium text-gray-700">Event Type:</label>
+                    <select id="eventType" class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3">
+                        <option value="reminder">Reminder</option>
+                        <option value="sick">Sick Leave</option>
+                        <option value="vacation">Vacation Leave</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="eventText" class="block text-sm font-medium text-gray-700">Event:</label>
+                    <input type="text" id="eventText" required class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md">Add</button>
+            </form>
+        </div>
+<script src="script.js"></script>
+</div>
+</center>
+</body>
+</html
